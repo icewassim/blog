@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Elwiss</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+    <a  href="https://elwiss.me">
+      <img src="pics/logo.jpg" class="logo">
+    </a>
+    <div class="social-nav-elments"  >
+      <a  href="https://github.com/icewassim" target="_blank">
+        <i class="fa fa-github fa-2x"></i>
+      </a>
+      <a  href="https://twitter.com/icewassim"  target="_blank">
+        <i class="fa fa-twitter fa-2x"></i>
+      </a>
+
+      <a  href="https://tn.linkedin.com/in/icewassim"  target="_blank">
+        <i class="fa fa-linkedin fa-2x"></i>
+      </a>
+    </div>
+  </header>
+  <div class="overlayer"></div>
+  <video autoplay loop class="background-vid">
+      <source src="heroVid/heroVid.mp4" type="video/mp4"></option>
+  </video>
+  <div class="main">
+    <div class="title">
+      I'm Wassim
+    </div>
+    <div class="subtitle">I Make Things</div>
+  </div>
+  <div id="main-scroll" >
+    <img src="pics/logo.jpg" class="logo">
+    <div class="hi-text">Hi.</div>
+    <div class="bio">
+      <div >I'm Wassim, Friends call me Elwiss.</div>
+      <div>I have a passion for web development, and like to work on creative Ideas</div>
+      <div>When not hacking on things for work or pure joy, I like to play with guitars</div>
+      <div>jog or Explore new Places.</div>
+      <br>
+      <a class="btn-ping btn-sm" href="#">
+        <i class="fa fa-envelope"></i> Ping me
+      </a>
+    </div>
+  </div>
+</body>
+<style type="text/css">
+
+ * {
+   box-sizing: border-box;
+ }
+
+ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td { margin: 0; padding: 0; box-sizing: border-box; }
+ header{
+  border-bottom: 0.5px solid rgba(236, 235, 235, 0.67);
+  display: block;
+  height: 70px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 2;
+ }
+
+ a{
+    color: #FFFFFF;
+    text-decoration: none;
+ }
+
+.overlayer{
+  background: black;
+  top:0px;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  height: 90%;
+  opacity: 0.1;
+ }
+
+.background-vid{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+.main {
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    top: 250px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding-top: 50px;
+  }
+
+.main .title{
+  font-size: 100px;
+}
+
+.main .subtitle{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+}
+
+
+header .logo {
+  margin-left: 10%;
+  margin-top: 32px;
+  width: 73px;
+  border-radius: 50%;
+}
+
+.social-nav-elments{
+  float: right;
+  margin-top: 20px;
+  margin-right: 10%;
+  color:white;
+}
+
+
+.social-nav-elments i{
+  color:white;
+  margin-right: 30px;
+}
+
+#main-scroll{
+  background: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 90%;
+  text-align: center;
+}
+
+#main-scroll .logo{
+  margin-top: 100px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hi-text{
+  font-family: 'Roboto', sans-serif;
+  margin-top: 30px;
+  font-size: 30px;
+  color: #0086CD;
+}
+
+.bio{
+  margin-top:40px;
+  font-size: 20px;
+  color: black;
+}
+
+.bio div{
+  margin-bottom: 10px;
+}
+
+.btn-ping {
+  margin-top: 20px;
+  color:#0086CD;
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid #0086CD;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+}
+
+</style>
+<script type="text/javascript">
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+</html>
